@@ -12,21 +12,27 @@ public class Main {
 //                new Fish()
 //        );
 
-            Sky sky = new Sky();
-            sky.addTraffic(new Duck());
-            sky.addTraffic(new Pigeon());
-            sky.addTraffic(new Aeroplane());
+        Sky sky = new Sky();
+        sky.addTraffic(new Duck());
+        sky.addTraffic(new Pigeon());
+        sky.addTraffic(new Aeroplane());
 
-            Water water = new Water();
-            water.addTraffic(new Duck());
-            water.addTraffic(new Fish());
+        Water water = new Water();
+        water.addTraffic(new Duck());
+        water.addTraffic(new Fish());
 
-            List<Environment<?>> environments = List.of(sky, water);
+        Road road = new Road();
+        road.addTraffic(new Car());
+        road.addTraffic(new Van());
+        road.addTraffic(new Lorry());
 
-            for (Environment<?> environment: environments) {
-                environment.checkTraffic();
-            }
+        List<Environment<?>> environments = List.of(sky, water, road);
 
+        for (Environment<?> environment: environments) {
+            environment.checkTraffic();
+        }
+
+    }
 
 
 
@@ -48,4 +54,3 @@ public class Main {
 //        }
 
     }
-}
