@@ -1,7 +1,6 @@
 package org.example;
 
-public class Fish extends Animal implements Swimmable{
-
+public class Pigeon extends Bird{
     @Override
     public void makeSound() {
 

@@ -1,7 +1,39 @@
 package org.example;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+//
+//        List<Object> objects = List.of(
+//                new Aeroplane(),
+//                new Car(),
+//                new Pigeon(),
+//                new Duck(),
+//                new Fish()
+//        );
+
+        Sky sky = new Sky();
+        sky.addTraffic(new Duck());
+        sky.addTraffic(new Pigeon());
+        sky.addTraffic(new Aeroplane());
+
+        sky.checkTraffic();
+
+        for (Object object : objects) {
+
+            if (object instanceof Swimmable swimmable) {
+                swimmable.swim();
+            }
+
+            if (object instanceof Flyable flyable) {
+                flyable.fly();
+            }
+
+            if (object instanceof Vehicle vehicle) {
+                vehicle.move();
+            }
+
+        }
+
     }
 }

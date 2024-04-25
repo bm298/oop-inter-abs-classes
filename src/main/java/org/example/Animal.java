@@ -7,7 +7,3 @@ public abstract class Animal {
 
 }
 
-public interface Flyable {
-    void fly();
-}
-
