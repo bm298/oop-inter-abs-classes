@@ -3,7 +3,7 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Environment {
+public abstract class Environment <T>{
 
     protected List<T> traffic = new ArrayList<>();
 

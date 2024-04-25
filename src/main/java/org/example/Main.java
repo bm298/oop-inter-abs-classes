@@ -12,28 +12,40 @@ public class Main {
 //                new Fish()
 //        );
 
-        Sky sky = new Sky();
-        sky.addTraffic(new Duck());
-        sky.addTraffic(new Pigeon());
-        sky.addTraffic(new Aeroplane());
+            Sky sky = new Sky();
+            sky.addTraffic(new Duck());
+            sky.addTraffic(new Pigeon());
+            sky.addTraffic(new Aeroplane());
 
-        sky.checkTraffic();
+            Water water = new Water();
+            water.addTraffic(new Duck());
+            water.addTraffic(new Fish());
 
-        for (Object object : objects) {
+            List<Environment<?>> environments = List.of(sky, water);
 
-            if (object instanceof Swimmable swimmable) {
-                swimmable.swim();
+            for (Environment<?> environment: environments) {
+                environment.checkTraffic();
             }
 
-            if (object instanceof Flyable flyable) {
-                flyable.fly();
-            }
 
-            if (object instanceof Vehicle vehicle) {
-                vehicle.move();
-            }
 
-        }
+
+
+//        for ( Environment<T> traffic  : sky.traffic) {
+//
+//            if (traffic instanceof Swimmable swimmable) {
+//                swimmable.swim();
+//            }
+//
+//            if (object instanceof Flyable flyable) {
+//                flyable.fly();
+//            }
+//
+//            if (object instanceof Vehicle vehicle) {
+//                vehicle.move();
+//            }
+//
+//        }
 
     }
 }
